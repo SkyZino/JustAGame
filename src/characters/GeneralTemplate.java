@@ -19,19 +19,19 @@ public class GeneralTemplate {
         }
 
     protected void setHp(int hp) {
-            if (hp >= 10 && hp <= 40){
+            if (hp >= 10){
                 this.hp = hp;
             } else {
-                System.out.println("Hp должно быть не меньше 10 и не больше 40");
+                System.out.println("Hp должно быть не меньше 10");
             }
         }
 
 
     protected void setMp(int mp) {
-            if (mp >= 10 && mp <= 20){
+            if (mp >= 10){
                 this.mp = mp;
             } else {
-                System.out.println("Mp должно быть не меньше 10 и не больше 20");
+                System.out.println("Mp должно быть не меньше 10");
             }
         }
 
