@@ -23,7 +23,7 @@ public class Hero extends GeneralTemplate {
         do {
             System.out.print("Введите Хп(от 10 до 40): ");
             int hp = scanner.nextInt();
-            if (hp < 40) {
+            if (hp <= 40) {
                 setHp(hp);
             }
         } while(hp < 10 || hp > 40);
@@ -32,7 +32,7 @@ public class Hero extends GeneralTemplate {
         do {
             System.out.print("Введите Мп(от 10 до 20): ");
             int mp = scanner.nextInt();
-            if (mp < 20) {
+            if (mp <= 20) {
                 setMp(mp);
             }
         } while(mp < 10 || mp > 20);
