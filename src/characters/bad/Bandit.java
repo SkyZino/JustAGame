@@ -1,17 +1,17 @@
-package characters.good;
+package characters.bad;
 
 import characters.GeneralTemplate;
 
 import java.util.Scanner;
 
-public class Hero extends GeneralTemplate {
+public class Bandit extends GeneralTemplate {
     private static Scanner scanner = new Scanner(System.in);
 
-    public Hero() {
-        createHero();
+    public Bandit() {
+        createBandit();
     }
 
-    public void createHero() {
+    public void createBandit() {
         System.out.print("Введите имя: ");
         setName(scanner.next());
 
