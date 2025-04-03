@@ -1,6 +1,7 @@
 package main;
 
 import characters.MyArrayPersonCollection;
+import characters.battle.Battle;
 import characters.good.Hero;
 import characters.bad.Bandit;
 
@@ -27,8 +28,9 @@ public class Main {
         System.out.println("1. Создать героя. ");
         System.out.println("2. Создать бандита. ");
         System.out.println("3. Посмотреть всех созданных персонажей. ");
-        System.out.println("4. Посмотреть информацию о герое. ");
+        System.out.println("4. Посмотреть информацию о героях. ");
         System.out.println("5. Посмотреть информацию о бандите. ");
+        System.out.println("6. Устроить битву между героем и бандитом. ");
         System.out.println("0. Выйти из игры. ");
     }
 
@@ -49,6 +51,16 @@ public class Main {
                     MyArrayPersonCollection.getInfoAboutCreatedChar(i);
                 }
                 break;
+            case 4:
+                System.out.println("Информация о всех созданных героях: ");
+                MyArrayPersonCollection.getHeroInfoFromTheArray("hero");
+                break;
+            case 5:
+                System.out.println("Информация о всех созданных бандитах: ");
+                MyArrayPersonCollection.getHeroInfoFromTheArray("bandit");
+                break;
+            case 6:
+                Battle.startBattle();
         }
         return true;
     }
