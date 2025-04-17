@@ -2,43 +2,31 @@ package characters.good;
 
 import characters.GeneralTemplate;
 
-import java.util.Scanner;
-
 public class Hero extends GeneralTemplate {
-    private static Scanner scanner = new Scanner(System.in);
+    private int mp;
 
     public Hero() {
-        createHero();
+        super(10, 10, "Hero");
+        this.mp = 10;
     }
 
-    public void createHero() {
-        System.out.print("Введите имя: ");
-        setName(scanner.next());
-
-        do {
-            System.out.print("Введите возраст(не меньше 18): ");
-            setAge(scanner.nextInt());
-        } while(this.age < 18);
-
-        do {
-            System.out.print("Введите Хп(от 10 до 40): ");
-            int hp = scanner.nextInt();
-            if (hp <= 40) {
-                setHp(hp);
-            }
-        } while(hp < 10 || hp > 40);
-
-
-        do {
-            System.out.print("Введите Мп(от 10 до 20): ");
-            int mp = scanner.nextInt();
-            if (mp <= 20) {
-                setMp(mp);
-            }
-        } while(mp < 10 || mp > 20);
+    public Hero(int hp, int power, String name, int mp) {
+        super(hp, power, name);
+        this.mp = mp;
     }
 
-//    public void Info() {
-//        getInfoAboutCharacter();
-//    }
+    public void setMp(int mp) {
+        this.mp = mp;
+    }
+
+    @Override
+    public int hit() {
+        return power - 4;
+    }
+
+    @Override
+    public void getInfo() {
+        super.getInfo();
+        System.out.println("Mp: " + mp);
+    }
 }

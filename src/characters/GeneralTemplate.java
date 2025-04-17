@@ -1,44 +1,34 @@
 package characters;
 
-public class GeneralTemplate {
+public abstract class GeneralTemplate {
     protected String name;
-    protected int age;
+    protected int power;
     protected int hp;
-    protected int mp;
 
-    protected void setName(String name) {
+
+    public GeneralTemplate(int hp, int power, String name) {
+        this.hp = hp;
+        this.power = power;
         this.name = name;
     }
 
-    protected void setAge(int age) {
-            if (age >= 18){
-                this.age = age;
-            } else {
-                System.out.println("Тебе должно быть не меньше 18");
-            }
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    protected void setHp(int hp) {
-            if (hp >= 10){
-                this.hp = hp;
-            } else {
-                System.out.println("Hp должно быть не меньше 10");
-            }
-        }
+    public void setPower(int power) {
+        this.power = power;
+    }
 
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
 
-    protected void setMp(int mp) {
-            if (mp >= 10){
-                this.mp = mp;
-            } else {
-                System.out.println("Mp должно быть не меньше 10");
-            }
-        }
+    public abstract int hit();
 
-    protected void getInfoAboutCharacter() {
+    public void getInfo() {
         System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+        System.out.println("Power: " + power);
         System.out.println("Hp: " + hp);
-        System.out.println("Mp: " + mp);
     }
 }
