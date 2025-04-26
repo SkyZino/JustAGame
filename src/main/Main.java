@@ -1,16 +1,9 @@
 package main;
 
-//import characters.battle.Battle;
-import characters.MyArrayPersonCollection;
-import main.СreateCharacters;
-
-
-import java.util.Scanner;
+import main.StartGame;
 
 public class Main {
-    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        СreateCharacters.createCharacters();
-        MyArrayPersonCollection.getInfoAboutAllCharacters();
+        StartGame.startGame();
     }
 }

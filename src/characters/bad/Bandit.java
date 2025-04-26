@@ -1,11 +1,10 @@
 package characters.bad;
-
 import characters.GeneralTemplate;
 
 public class Bandit extends GeneralTemplate {
 
     public Bandit() {
-        super(15, 10, "Bandit");
+        super();
     }
 
     public Bandit(int hp, int power, String name) {
@@ -13,7 +12,7 @@ public class Bandit extends GeneralTemplate {
     }
 
     @Override
-    public int hit() {
-        return power;
+    public void getInfo() {
+        super.getInfo();
     }
 }
