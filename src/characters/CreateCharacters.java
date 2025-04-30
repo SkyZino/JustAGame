@@ -8,7 +8,7 @@ import characters.CharList;
 
 
 public class CreateCharacters {
-    static private Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void createChar() {
         do {
@@ -32,11 +32,15 @@ public class CreateCharacters {
         switch (playerChoice) {
             case 1:
                 Hero hero = new Hero();
+                System.out.print("Дайте имя герою: ");
+                hero.setName(scanner.next());
                 System.out.println("Герой создан");
                 CharList.addCharacter(hero);
                 break;
             case 2:
                 Bandit bandit = new Bandit();
+                System.out.print("Дайте имя герою: ");
+                bandit.setName(scanner.next());
                 System.out.println("Бандит создан");
                 CharList.addCharacter(bandit);
                 break;
